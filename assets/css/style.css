@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+*{
+    font-family: 'Roboto' , sans-serif;
+}
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
-.container {
-    display: flex;
-    box-sizing: border-box;
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-top: 60px;
 }
 
 button {
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
 #menu {
+    display: flex;
     height: 56px;
     width: 100%;
     flex-direction: row;
@@ -104,281 +111,61 @@ button {
     height: 100%;
 }
 
-main {
+.sidebar-item{
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.column-related-video {
-    display: flex;
-    padding: 24px 24px 0 0;
-}
-
-.column-watching-video {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    max-width: 900px;
-    margin: 0 0 0 24px;
-    padding: 24px 24px 0 0;
-}
-
-.column-watching-video iframe {
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.column-watching-video h2 {
-    font-size: 20px;
-}
-
-.top-row-watch-data {
-    display: flex;
-    height: auto;
-    gap: 0 10px;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    flex-wrap: wrap;
-}
-
-.logoDio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#name-subscribe-data {
-    margin: 0 24px 0 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-#name-subscribe-data p {
-    font-size: 12px;
-    margin: 2px 0 0 0 ;
-}
-
-#name-subscribe-data a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.left-top-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.right-top-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin: 0 20px;
     gap: 0 20px;
     align-items: center;
-}
-
-.buttons-like-unlike {
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-}
-
-.buttons-share-download {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button-scope {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#button-subscribe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: black;
-    border: none;
-    text-decoration: none;
-    margin: auto;
-}
-
-#button-subscribe button {
-    background-color: black;
-    border: none;
-    color: white;
-}
-
-#button-like {
-    display: flex;
-    border-radius: 20px 0 0 20px;
-    border: none;
-    padding: 0px 15px;
-    border-right: 1.5px solid darkgrey;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    line-height: 0.8em;
-    text-decoration: none;
-    color: black;
-}
-
-#button-like img {
-    margin-right: 10px;
-}
-
-#button-unlike {
-    border-radius: 0 20px 20px 0;
-    border: none;
-    padding: 4px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#button-unlike img {
-    margin-top: 5px;
-}
-
-#button-share {
-    margin-right: 10px;
-    border-radius: 20px;
-    border: none;
-    padding: 5px 10px;
-    font-weight: bolder;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: black;
-}
-
-#button-share img {
-    margin-right: 10px;
-
-}
-
-#button-download {
-    border-radius: 20px;
-    border: none;
-    height: 40px;
-    width: 40px;
-}
-
-#description {
-    background: #dfdfdf30;
-    border-radius: 20px;
     font-size: 14px;
+}
+.sidebar{
+    align-self: start;
+    position: sticky;
+    top: 56px
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding:15px;
+}
+
+.video{
     display: flex;
     flex-direction: column;
-    margin: 0 0;
-    padding: 10px;
 }
 
-#description:hover {
-    background: #dfdfdf70;
-}
-
-#info-description {
+.video .logo-title{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: column;
 }
 
-#top-info-description {
-    font-weight: bold;
-    margin-bottom: -10px;
-}
-
-#description a {
-    text-decoration: none;
-    color: #065FD4;
-}
-
-.content-description ol {
-    padding: 0 16px;
-    margin: 0;
-}
-
-#info-description span {
-    margin-right: 10px;
-}
-
-.dots-description-division {
-    margin-top: -10px;
-}
-
-.related-video {
+.video .channel-views{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    max-width: 350px;
-    padding: 10px;
+    margin: 0 42px;
 }
 
-.item-related-video {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    cursor: pointer;
-    gap: 10px;
-}
-
-.item-related-video a {
-    display: flex;
-    text-decoration: none;
-    color: black;
-}
-
-.img-related-video img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
+.video .frame-video{
     border-radius: 10px;
-
 }
 
-.info-related-video {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: small;
-    text-align: left;
+.video .title h4{
+    margin: 2px 10px;
+    font-size: 16px;
 }
 
-.info-related-video p {
-    margin-bottom: -5px;
-    margin-top: 10px;
-    font-weight: 400px;
-}
-
-.info-related-video h1 {
-    margin-bottom: -5px;
+.video .channel p{
+    margin: 5px 10px 0 10px;
+    color: #515151;
     font-size: 14px;
-    margin-top: 0;
-    font-weight: 600px;
 }
 
-.info-related-video p {
-    color: #606060;
+.video .views p{
+    margin: 0;
+    margin: 0 10px 0 10px;
+    color: #515151;
+    font-size: 14px;
 }
